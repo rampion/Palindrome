@@ -9,7 +9,7 @@ import Control.Arrow ((***))
 maximalPalindromeLengths :: Eq a => [a] -> [Int]
 maximalPalindromeLengths as = grow 0 [] as as []
   where -- grow n lz rz as log
-        --    n     - confirmed length of palindrome at current position
+        --    n     - confirmed length of palindrome centered at the current position
         --    lz rz - zipper for elements at the start of the palindrome
         --    as    - elements after the palindrome
         --    log   - reversed list of maximal palindrome lengths found so far
